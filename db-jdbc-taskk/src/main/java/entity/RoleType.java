@@ -1,4 +1,4 @@
-package db.entity;
+package entity;
 
 
 public enum RoleType {

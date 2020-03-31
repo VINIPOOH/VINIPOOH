@@ -1,4 +1,5 @@
 package db.factory;
+
 import exeptions.DBRuntimeException;
 import org.apache.commons.dbcp.BasicDataSource;
 
@@ -10,7 +11,7 @@ public class DBConnector implements DbConnectionConstants {
 
     private final BasicDataSource dataSource;
 
-    private DBConnector() {
+    public DBConnector() {
         ResourceBundle bundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_DATABASE);
         BasicDataSource ds = new BasicDataSource();
         ds.setUrl(bundle.getString(DB_URL));

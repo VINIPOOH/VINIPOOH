@@ -5,7 +5,7 @@ import java.util.Optional;
 
 public interface CrudRepository<E, ID> {
 
-    boolean save(E entity);
+    boolean save(E entity) throws Throwable;
 
     Optional<E> findById(ID id);
 
@@ -14,6 +14,4 @@ public interface CrudRepository<E, ID> {
     boolean update(E entity);
 
     boolean deleteById(ID id);
-
-    Integer countAll();
 }
